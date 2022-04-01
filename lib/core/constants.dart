@@ -4,5 +4,3 @@ const WORKER_TASK_NAMESPACE = 'taskName';
 const WORKER_TASK_PAYLOAD = "payload";
 const WORKER_RESPONSE_STATUS_NAMESPACE = "status";
 const WORKER_RESPONSE_DATA_NAMESPACE = "data";
-
-const WORKER_GET_POSTS_NAMESPACE = "getPosts";

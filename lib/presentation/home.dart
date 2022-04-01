@@ -1,5 +1,5 @@
 import "package:flutter/material.dart";
-import 'package:isolate/core/constants.dart';
+import 'package:isolate/core/clients/enums.dart';
 import 'package:isolate/models/post_model.dart';
 import 'package:isolate/providers/posts_provider.dart';
 import 'package:isolate/workers/main.dart';
@@ -15,9 +15,9 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   @override
   void initState() {
-    Worker.createTask(
-      postsProvider: context.read<PostsProvider>(),
-      taskName: WORKER_GET_POSTS_NAMESPACE,
+    Worker.createTask<PostsProvider>(
+      provider: context.read<PostsProvider>(),
+      taskName: WorkerTasks.GetPosts,
       inputData: {},
     );
     super.initState();
